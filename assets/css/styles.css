@@ -35,7 +35,7 @@ header a {
 }
 
 header h2 {
-	font-size: 14px;
+	font-size: 20px;
 }
 
 header h2.tzine{
@@ -48,7 +48,7 @@ header h2.tzine:hover{
 }
 
 header h2.tzine a{
-	font-size: 12px;
+	font-size: 20px;
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 12px 18px;
@@ -63,7 +63,7 @@ header h2.tzine a{
 	}
 
 	header h1{
-		font-size: 20px;
+		font-size: 26px;
 		margin: 0;
 	}
 
@@ -75,6 +75,7 @@ header h2.tzine a{
 
 
 .main-content{
+    display: flex;
 	box-sizing: border-box;
 	text-align: center;
 	margin: 80px auto 60px;
@@ -82,7 +83,7 @@ header h2.tzine a{
 }
 
 .main-content h3{
-	font-size: 28px;
+	font-size: 20px;
 	color:  #5a96b9;
 	padding-bottom: 20px;
 }
@@ -124,7 +125,6 @@ header h2.tzine a{
 }
 
 .filters span{
-	font-size:14px;
 	display: block;
 	margin-bottom: 12px;
 	font-weight: bold;
@@ -132,20 +132,17 @@ header h2.tzine a{
 }
 
 .filters .hintDescription {
-	font-size: 12px;
     font-weight: normal;
 }
 
 .filters label{
 	display: block;
 	line-height: 1.4;
-	font-size: 15px;
 }
 
 .filters select{
 	display: block;
 	line-height: 1.4;
-	font-size: 15px;
 }
 
 .filters label input{
@@ -159,7 +156,6 @@ header h2.tzine a{
 	border: 0;
 	color: #ffffff;
 	font-weight: bold;
-	font-size: 13px;
 	cursor: pointer;
 
 	width: 95px;
@@ -179,7 +175,7 @@ header h2.tzine a{
 	text-align: center;
 	padding: 0;
 	opacity: 0;
-	font-size: 20px;
+	font-size: 150%;
 }
 
 .all-hints.visible .hints-area,

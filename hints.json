@@ -1,0 +1,40 @@
+{
+	"english" : {
+		"Ant" : {
+			"Level 1" : [ "Salt" ],
+			"Level 2" : [ "Chin" ],
+			"Level 3" : [ "Nose" ],
+			"Level 4" : [ "Spot" ],
+			"Level 5" : [ "Idea" ],
+			"Level 6" : [ "Talk" ],
+			"Level 7" : [ "Clam" ],
+			"Level 8" : [ "Soup" ],
+			"Level 9" : [ "Maze" ],
+			"Level 10" : [ "Duck" ]
+		},
+		"Spider": {
+			"Level 1" : [ "Oval"],
+			"Level 2" : [ "Kite"],
+			"Level 3" : [ "Stop"],
+			"Level 4" : [ "Goat"],
+			"Level 5" : [ "Sail"],
+			"Level 6" : [ "Mast"],
+			"Level 7" : [ "Path"],
+			"Level 8" : [ "Cork"],
+			"Level 9" : [ "Sofa"],
+			"Level 10" : [ "Sink"]
+		},
+		"Snail": {
+			"Level 1" : [ "Doll", "Slide"],
+			"Level 2" : [ "Kayak", "Duck"],
+			"Level 3" : [ "Cheese", "Fan"],
+			"Level 4" : [ "Pigsty", "Fly"],
+			"Level 5" : [ "No", "Eyeball"],
+			"Level 6" : [ "Candle", "Bed"],
+			"Level 7" : [ "Beard", "Meat"],
+			"Level 8" : [ "Lemon", "Face"],
+			"Level 9" : [ "Egg", "Tennis"],
+			"Level 10" : [ "Castle", "Tin"]
+		}
+	}
+}

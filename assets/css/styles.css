@@ -135,6 +135,12 @@ header h2.tzine a{
 	font-size: 15px;
 }
 
+.filters select{
+	display: block;
+	line-height: 1.4;
+	font-size: 15px;
+}
+
 .filters label input{
 	margin-right: 10px;
 }
@@ -155,244 +161,37 @@ header h2.tzine a{
 }
 
 
-/*	Products List	*/
-
-.all-products h3{
+.all-hints h3{
 	opacity: 0;
 }
 
-.products-list{
+.hints-area{
 	list-style:none;
 	margin-left:225px;
 	max-width: 1500px;
 	text-align: center;
 	padding: 0;
 	opacity: 0;
-	font-size: 0;
+	font-size: 20px;
 }
 
-.all-products.visible .products-list,
-.all-products.visible .filters,
-.all-products.visible h3{
+.all-hints.visible .hints-area,
+.all-hints.visible .filters,
+.all-hints.visible h3{
 	opacity: 1;
 	transition: 1s;
 	pointer-events: auto;
 }
 
-.products-list > li{
-	box-sizing:border-box;
-	display: inline-block;
-	cursor: pointer;
-	position: relative;
-	transition: 0.2s;
-
-	text-align:left;
-	font:normal 12px sans-serif;
-
-	background-color:#ffffff;
-	border:1px solid #dbe3e7;
-	border-radius: 3px;
-	box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.08);
-
-	margin: 0 12px 14px 0;
-	padding: 25px;
-}
-
-.products-list > li.hidden{
-	opacity: 0.2;
-	pointer-events: none;
-}
-
-/* The product image */
-
-.products-list .product-photo{
-	display: block;
-	text-align: center;
-	box-shadow : 0 0 20px 8px #f3f3f3 inset;
-
-	width: 275px;
-	margin-bottom: 25px;
-	padding: 20px 0;
-	box-sizing: border-box;
-}
-
-/* The product name */
-
-.products-list h2{
-	display: block;
-	font-size: 18px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow:ellipsis;
-	max-width: 200px;
-	margin:0;
-}
-
-.products-list h2 a{
+.hints-area h2 a{
 	text-decoration: none;
 	color: #2B2E31;
 }
 
-/* Product description */
-
-.products-list .product-description{
-	margin-top: 20px;
-
-	color: #5d5d5d;
-	font-size: 14px;
-	line-height: 1.45;
-	white-space: normal;
-
-	max-width: 260px;
-	margin-bottom: 20px;
-
-	list-style: none;
+.hints-area .hints-span{
+	font-famly: monospace;
+	letter-spacing: 4px;
 }
-
-.products-list .product-description li{
-	display: inline-block;
-	margin-right: 5px;
-}
-
-.products-list .product-description li:first-child{
-	display: block;
-}
-
-.products-list .product-description li span{
-	font-weight: bold;
-}
-
-/* Price and order button */
-
-.products-list button{
-	border-radius: 2px;
-	background-color:  #87bae1;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
-	border: 0;
-	color: #ffffff;
-	font-weight: bold;
-	font-size: 13px;
-	cursor: pointer;
-
-	width: 95px;
-	height: 32px;
-}
-
-.products-list .product-price{
-	float: right;
-
-	color:  #4e4e4e;
-	font-weight: bold;
-	font-size: 20px;
-
-	padding-top: 6px;
-	margin: 0;
-}
-
-.products-list .highlight{
-	position: absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	background-color: rgba(0,0,0,0.1);
-	opacity: 0;
-	transition: 0.4s;
-}
-
-.products-list > li:hover .highlight{
-	opacity: 1;
-}
-
-/* Making the list responsive */
-
-@media (max-width: 800px){
-
-	.products-list .product-photo{
-		width: 225px;
-	}
-
-	.products-list .product-description{
-		max-width: 225px;
-	}
-}
-
-
-/*---------------------------
-	Single Product Page
-----------------------------*/
-
-.single-product{
-	z-index: 100;
-}
-
-.overlay{
-	height: 20px;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: #282b2c;
-	transition: 0.6s;
-	z-index: 100;
-}
-
-.single-product.visible .overlay{
-	height: 100%;
-}
-
-.preview-large{
-	box-sizing: border-box;
-	width: 760px;
-	height: 550px;
-	position: fixed;
-	left: 50%;
-	margin-left: -375px;
-	top: 50%;
-	margin-top: -275px;
-	pointer-events: none;
-
-	border-radius: 6px;
-	background-color:  #ffffff;
-
-	z-index: 102;
-	opacity: 0;
-	transition: 0.4s;
-
-}
-
-.single-product.visible .preview-large{
-	opacity: 1;
-	transition: 1.4s;
-	pointer-events: auto;
-}
-
-.preview-large h3{
-	margin-top: 20px;
-}
-
-.preview-large img{
-	width: 100%;
-	height: 280px;
-	border-bottom: 3px solid #efefef;
-	border-radius: 5px 5px 0 0;
-}
-
-.preview-large p{
-	line-height: 23px;
-	padding: 50px 45px;
-}
-
-.close{
-	position: absolute;
-	right: 25px;
-	top: 15px;
-
-	font-size: 28px;
-	color: #555;
-	cursor: pointer;
-}
-
 
 /*---------------------------
 	Error Page

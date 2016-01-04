@@ -3,16 +3,7 @@ $(function () {
 	// Globals variables
 
 	// 	An array containing all our hints
-	var hints = [],
-
-		filters = {};
-
-	// When the "Clear all filters" button is pressed change
-	// the hash to '#' (go to the home page)
-	$('.filters button').click(function (e) {
-		e.preventDefault();
-		populateAnimalsDropdown(hints);
-	});
+	var hints = [];
 
 	// These are called on page load
 	$('.AnimalList').change( function() {
@@ -26,7 +17,10 @@ $(function () {
 		renderHints();
 	});
 
-	$('.HintLevel').change( function() {
+	$('.HintLevel').keypress(function (e) {
+		if (e.keyCode == 13) {
+			e.preventDefault(); // prevent form submit
+		}
 		renderHints();
 	});
 
@@ -122,6 +116,20 @@ $(function () {
 		var charIdx = 0; // which char in a word
 
 		while (hintLevel > 0) {
+			if ((wordIdx + 1) > words.length) {
+				wordIdx = 0;
+				charIdx++;
+			}
+
+			var newHint;
+			if (charIdx == 0) {
+				newHint = words[wordIdx].charAt(0) + wordHints[wordIdx].substr(1);
+			} else {
+				newHint = words[wordIdx].substr(0, charIdx+1) + wordHints[wordIdx].substr(charIdx+1);
+			}
+			wordHints[wordIdx] = newHint;
+
+			wordIdx++;
 			--hintLevel;
 		}
 

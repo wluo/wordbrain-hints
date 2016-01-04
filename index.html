@@ -15,9 +15,8 @@
 
 	<header class="compact">
 	  <h2>Will's Wordbrain Hints</h1>
-	  <span class="headerDescription">
-	  (data from <a href="http://wordbrain.org/">wordbrain.org</a> and <a href="http://wordbrainsolver.com/"> wordbrainsolver.com</a>)<br>
-	  Each Hint Level reveals one more letter in a word, similar to how the game hints.</span>
+	  <i>(data from <a href="http://wordbrain.org/">wordbrain.org</a> and <a href="http://wordbrainsolver.com/"> wordbrainsolver.com</a>)</i>
+      </span>
 	</header>
 
 	<div class="main-content">
@@ -39,11 +38,12 @@
 					</div>
 
 					<div class="filter-criteria">
-						<span>Hint Level</span>
+						<span>Letters to Show</span>
 						<input class="HintLevel" id="hintLevel" autocomplete="off" size="10" value="0">
 						</input>
-					</div>
+                        <span class="hintDescription">Each hint letter is revealed in a different word, similar to how hints work in the game. There's a bug for later levels when revealing many letters. Just put in a larger number like 100 if you want to see all the letters.</span>
 
+					</div>
 				</form>
 
 			</div>

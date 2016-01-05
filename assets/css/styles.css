@@ -35,7 +35,7 @@ header a {
 }
 
 header h2 {
-	font-size: 20px;
+	font-size: 120%;
 }
 
 header h2.tzine{
@@ -48,7 +48,7 @@ header h2.tzine:hover{
 }
 
 header h2.tzine a{
-	font-size: 20px;
+	font-size: 120%;
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 12px 18px;
@@ -56,17 +56,29 @@ header h2.tzine a{
 	background-color: #5895DB;
 }
 
-@media (max-width: 500px){
+@media (max-width: 720px){
 
 	header {
 		padding: 15px 15px;
+        height: 60px;
 	}
 
 	header h1{
-		font-size: 26px;
+		font-size: 180%;
 		margin: 0;
 	}
 
+    body{
+	    font-size: 150%;
+    }
+
+    .HintLevel {
+	    font-size: 80%;
+    }
+
+    .LevelList {
+        font-size: 300%;
+    }
 }
 
 /*-----------------
@@ -83,18 +95,25 @@ header h2.tzine a{
 }
 
 .main-content h3{
-	font-size: 20px;
+	font-size: 120%;
 	color:  #5a96b9;
 	padding-bottom: 20px;
 }
 
-@media (max-width: 600px){
+@media (max-width: 720px){
 
 	.main-content{
 		margin: 100px auto;
 		padding: 0 25px;
 	}
 
+    body{
+	    font-size: 150%;
+    }
+
+    .filters select{
+        font-size: 250%;
+    }
 }
 
 
@@ -215,6 +234,6 @@ header h2.tzine a{
 }
 
 .error h3{
-	font-size: 40px;
+	font-size: 200%;
 }
 

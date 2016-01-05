@@ -4,6 +4,7 @@
 <head lang="en">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8">
+	<meta name='viewport' content='width=480' />
 
 	<title>Wordbrain Hints</title>
 
@@ -15,7 +16,7 @@
 
 	<header class="compact">
 	  <h2>Will's Wordbrain Hints</h1>
-	  <i>(data from <a href="http://wordbrain.org/">wordbrain.org</a> and <a href="http://wordbrainsolver.com/"> wordbrainsolver.com</a>)</i>
+	  <i class="hintDescription">(data from <a href="http://wordbrain.org/">wordbrain.org</a> and <a href="http://wordbrainsolver.com/"> wordbrainsolver.com</a>)</i>
       </span>
 	</header>
 
@@ -41,7 +42,7 @@
 						<span>Letters to Show</span>
 						<input class="HintLevel" id="hintLevel" autocomplete="off" size="10" value="0">
 						</input>
-                        <span class="hintDescription">Each hint letter is revealed in a different word, similar to how hints work in the game. There's a bug for later levels when revealing many letters. Just put in a larger number like 100 if you want to see all the letters.</span>
+                        <span class="hintDescription">Each hint letter is revealed in each subsequent word, similar to how hints work in the game. There's a bug for higher levels with 3 or 4 words when revealing many letters. For those just put in a larger number, like 100, if you want to see all the letters.</span>
 
 					</div>
 				</form>
@@ -59,7 +60,6 @@
 		</div>
 
 	</div>
-
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>

@@ -149,18 +149,19 @@ header h2.tzine a{
 
 .filters .filter-criteria{
 	display: block;
-	margin: 10px 0 10px;
+	margin: 5px 0 5px;
 }
 
 .filters span{
 	display: block;
-	margin-bottom: 12px;
+	margin-bottom: 0px;
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 5px;
 }
 
 .filters .hintDescription {
     font-weight: normal;
+	font-size: 70%;
 }
 
 .filters label{

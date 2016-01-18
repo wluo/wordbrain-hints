@@ -17,6 +17,11 @@ $(function () {
 		renderHints();
 	});
 
+	$('.WholeWordCheckbox').click( function() {
+		setHintLevel(0);
+		renderHints();
+	});
+
 	$('.HintLevel').keypress(function (e) {
 		if (e.keyCode == 13) {
 			e.preventDefault(); // prevent form submit
@@ -101,6 +106,7 @@ $(function () {
 		// get the animal/level/hint level
 		var animal = $('.AnimalList').val();
 		var level = $('.LevelList').val();
+		var wordFirst = $('.WholeWordCheckbox').prop('checked');
 		var hintLevel = $('.HintLevel').val();
 
 		var words = hints.english[animal][level];
@@ -115,22 +121,50 @@ $(function () {
 		var wordIdx = 0; // which word
 		var charIdx = 0; // which char in a word
 
-		while (hintLevel > 0) {
-			if ((wordIdx + 1) > words.length) {
-				wordIdx = 0;
+		if (wordFirst) {
+			// if we're not revealing a word at a time, then advanced to the
+			// next word to reveal a letter in each word at a time
+			while (hintLevel > 0) {
+
+				var newHint;
+				if (charIdx == 0) {
+					newHint = words[wordIdx].charAt(0) + wordHints[wordIdx].substr(1);
+				} else {
+					newHint = words[wordIdx].substr(0, charIdx+1) + wordHints[wordIdx].substr(charIdx+1);
+				}
+				wordHints[wordIdx] = newHint;
+
 				charIdx++;
-			}
+				if (charIdx >= words[wordIdx].length) {
+					// reached the end of a word
+					wordIdx++;
+					charIdx = 0;
+				}
+				--hintLevel;
 
-			var newHint;
-			if (charIdx == 0) {
-				newHint = words[wordIdx].charAt(0) + wordHints[wordIdx].substr(1);
-			} else {
-				newHint = words[wordIdx].substr(0, charIdx+1) + wordHints[wordIdx].substr(charIdx+1);
+				if (wordIdx >= words.length) {
+					break;
+				}
 			}
-			wordHints[wordIdx] = newHint;
+		}
+		else {
+			while (hintLevel > 0) {
+				if ((wordIdx + 1) > words.length) {
+					wordIdx = 0;
+					charIdx++;
+				}
 
-			wordIdx++;
-			--hintLevel;
+				var newHint;
+				if (charIdx == 0) {
+					newHint = words[wordIdx].charAt(0) + wordHints[wordIdx].substr(1);
+				} else {
+					newHint = words[wordIdx].substr(0, charIdx+1) + wordHints[wordIdx].substr(charIdx+1);
+				}
+				wordHints[wordIdx] = newHint;
+
+				wordIdx++;
+				--hintLevel;
+			}
 		}
 
 		$('.hints-span').html(wordHints.join(' '));
